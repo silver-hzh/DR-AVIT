@@ -105,7 +105,7 @@ if opts.trainer == 'MUNIT':
     for i, (images, names) in enumerate(zip(data_loader_B, image_names_B)):
         images = Variable(images.cuda(), volatile=True)
         basename = os.path.basename(names[1])
-        path = os.path.join(opts.output_folder, basename.split('.')[0]+'.png')
+        path = os.path.join(opts.output_folder, basename.split('.')[0] + '.png')
         if not os.path.exists(os.path.dirname(path)):
             os.makedirs(os.path.dirname(path))
         outputs = (images + 1) / 2.
@@ -118,19 +118,13 @@ if opts.trainer == 'MUNIT':
             cur_preds = []
         print(names[1])
         images = Variable(images.cuda(), volatile=True)
-        start_time = time.time()
         content, _ = encode(images)
-        end_time = time.time()
-        print("content time:{}".format(end_time-start_time))
         style = style_fixed if opts.synchronized else Variable(torch.randn(opts.num_style, style_dim, 1, 1).cuda(),
                                                                volatile=True)
         for j in range(opts.num_style):
-            start_time = time.time()
             s = style[j].unsqueeze(0)
             outputs = decode(content, s)
             outputs = (outputs + 1) / 2.
-            end_time = time.time()
-            print('decode time:{}'.format(end_time-start_time))
             if opts.compute_IS or opts.compute_CIS:
                 pred = F.softmax(inception(inception_up(outputs)),
                                  dim=1).cpu().data.numpy()  # get the predicted class distribution
@@ -140,7 +134,7 @@ if opts.trainer == 'MUNIT':
                 cur_preds.append(pred)
             # path = os.path.join(opts.output_folder, 'input{:03d}_output{:03d}.jpg'.format(i, j))
             basename = os.path.basename(names[1])
-            path = os.path.join(opts.output_folder, basename.split('.')[0]+"_%02d" % j+'.png')
+            path = os.path.join(opts.output_folder, basename.split('.')[0] + "_%02d" % j + '.png')
             if not os.path.exists(os.path.dirname(path)):
                 os.makedirs(os.path.dirname(path))
             vutils.save_image(outputs.data, path, padding=0, normalize=True)
@@ -171,7 +165,7 @@ elif opts.trainer == 'UNIT':
     for i, (images, names) in enumerate(zip(data_loader_B, image_names_B)):
         images = Variable(images.cuda(), volatile=True)
         basename = os.path.basename(names[1])
-        path = os.path.join(opts.output_folder, 'real_'+ basename.split('.')[0]+'.png')
+        path = os.path.join(opts.output_folder, 'real_' + basename.split('.')[0] + '.png')
         if not os.path.exists(os.path.dirname(path)):
             os.makedirs(os.path.dirname(path))
         outputs = (images + 1) / 2.
@@ -186,7 +180,7 @@ elif opts.trainer == 'UNIT':
         outputs = (outputs + 1) / 2.
         # path = os.path.join(opts.output_folder, 'input{:03d}_output{:03d}.jpg'.format(i, j))
         basename = os.path.basename(names[1])
-        path = os.path.join(opts.output_folder, 'fake_'+basename.split('.')[0]+'.png')
+        path = os.path.join(opts.output_folder, 'fake_' + basename.split('.')[0] + '.png')
         if not os.path.exists(os.path.dirname(path)):
             os.makedirs(os.path.dirname(path))
         vutils.save_image(outputs.data, path, padding=0, normalize=True)
