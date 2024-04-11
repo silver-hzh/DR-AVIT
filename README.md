@@ -19,3 +19,18 @@ The training results are stored in the `./outputs/NightDrone_MUNIT_0` folder.
 CUDA_VISIBLE_DEVICES=0 python test_batch.py --config ./configs/NightDrone_MUNIT.yaml --input_folder_A ./Datasets/NightDrone/testA --input_folder_B ./Datasets/NightDrone/testB --output_folder ./results/NightDrone_MUNIT_0 --checkpoint ./outputs/NightDrone_MUNIT_0/checkpoints/gen_00200000.pt
 ```
 The translation results are saved in the `./results/NightDrone_MUNIT_0` folder.
+
+
+## DSMAP：
+The code of the DSMAP is followed by https://github.com/acht7111020/DSMAP. Download the DSMAP code. Make the `Datasets` folder and put the downloaded datasets in the `Datasets` folder. Making the `outputs` and `results` folders to save checkpoints and translation results.
+### Training:
+```  
+CUDA_VISIBLE_DEVICES=0 python train.py --config ./configs/NightDrone_DSMAP.yaml --save_name  NightDrone_DSMAP_0
+```
+The training results are stored in the `./outputs/NightDrone_MUNIT_0` folder.
+### Testing:
+```
+CUDA_VISIBLE_DEVICES=0 python test_batch.py --config ./configs/NightDrone_MUNIT.yaml --input_folder_A ./Datasets/NightDrone/testA --input_folder_B ./Datasets/NightDrone/testB --output_folder ./results/NightDrone_MUNIT_0 --checkpoint ./outputs/NightDrone_MUNIT_0/checkpoints/gen_00200000.pt
+```
+The translation results are saved in the `./results/NightDrone_MUNIT_0` folder.
+
