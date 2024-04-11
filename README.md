@@ -8,7 +8,7 @@ The datasets can be downloaded from <https://pan.baidu.com/s/1q7hxGzAaR97L8T36NK
 # Other Methods
 We also support MUNIT, DRIT, DSMAP, and DCLGAN:
 ## MUNIT：
-The code of the MUNIT is followed by https://github.com/NVlabs/MUNIT. Download the MUNIT code and put the datasets in the `Datasets` folder.
+The code of the MUNIT is followed by https://github.com/NVlabs/MUNIT. Download the MUNIT code. Make the `Datasets` folder and put the downloaded datasets in the `Datasets` folder. Making the `outputs` and `results` folders to save checkpoints and translation results.
 ### Training:
 ```  
 CUDA_VISIBLE_DEVICES=0 python train.py --config ./configs/NightDrone_MUNIT.yaml --task 0
