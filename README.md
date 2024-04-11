@@ -10,4 +10,5 @@ We also support MUNIT, DRIT, DSMAP, and DCLGAN:
 ## MUNIT：
 The code of the MUNIT is followed by https://github.com/NVlabs/MUNIT.
 ### Training MUNIT:
-Change the data_root in the config .yaml
+```bash  
+CUDA_VISIBLE_DEVICES=1 python train.py --config ./configs/NightDrone_MUNIT.yaml --task 0 
