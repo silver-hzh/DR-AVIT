@@ -13,8 +13,9 @@ The code of the MUNIT is followed by https://github.com/NVlabs/MUNIT. Download t
 ```  
 CUDA_VISIBLE_DEVICES=0 python train.py --config ./configs/NightDrone_MUNIT.yaml --task 0
 ```
-The training results are stored in the `outputs\NightDrone_MUNIT_0` folder.
+The training results are stored in the `./outputs/NightDrone_MUNIT_0` folder.
 ### Testing:
 ```
 CUDA_VISIBLE_DEVICES=0 python test_batch.py --config ./configs/NightDrone_MUNIT.yaml --input_folder_A ./Datasets/NightDrone/testA --input_folder_B ./Datasets/NightDrone/testB --output_folder ./results/NightDrone_MUNIT_0 --checkpoint ./outputs/NightDrone_MUNIT_0/checkpoints/gen_00200000.pt
 ```
+The translation results are saved in the `./results/NightDrone_MUNIT_0` folder.
