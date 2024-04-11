@@ -15,5 +15,5 @@ CUDA_VISIBLE_DEVICES=0 python train.py --config ./configs/NightDrone_MUNIT.yaml 
 ```
 ### Testing:
 ```
-CUDA_VISIBLE_DEVICES=0 python test_batch.py 
+CUDA_VISIBLE_DEVICES=0 python test_batch.py --config ./configs/NightDrone_MUNIT.yaml --input_folder_A ./Datasets/NightDrone/testA --input_folder_B ./Datasets/NightDrone/testB --output_folder ./results/NightDrone_MUNIT_0 --checkpoint ./outputs/NightDrone_MUNIT_0/checkpoints/gen_00200000.pt
 ```
