@@ -6,6 +6,8 @@ The datasets can be downloaded from <https://pan.baidu.com/s/1q7hxGzAaR97L8T36NK
 
 
 # Other Methods
-we also support MUNIT, DRIT, DSMAP and DCLGAN:
+We also support MUNIT, DRIT, DSMAP, and DCLGAN:
 ## MUNIT：
 The code of the MUNIT is followed by https://github.com/NVlabs/MUNIT.
+### Training MUNIT:
+
