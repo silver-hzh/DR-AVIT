@@ -34,3 +34,21 @@ CUDA_VISIBLE_DEVICES=0 python test.py --config ./configs/NightDrone_DSMAP.yaml -
 ```
 The translation results are saved in the `./results/NightDrone_DSMAP_0` folder.
 
+
+
+## ACLGAN：
+The code of the DSMAP is followed by https://github.com/hyperplane-lab/ACL-GAN. Download the ACLGAN code. Make the `Datasets` folder and put the downloaded datasets in the `Datasets` folder. Making the `outputs` and `results` folders to save checkpoints and translation results.
+### Training:
+```  
+CUDA_VISIBLE_DEVICES=0 python train.py --config ./configs/NightDrone_ACLGAN.yaml --task 0
+```
+The training results are stored in the `./outputs/NightDrone_ACLGAN_0` folder.
+### Testing:
+```
+CUDA_VISIBLE_DEVICES=0 python test_batch.py --config ./configs/NightDrone_ACLGAN.yaml --input_folder_A ../Datasets/NightDrone/testA --input_folder_B ../Datasets/NightDrone/testB --output_folder ./results/NightDrone_ACLGAN_0 --checkpoint ./outputs/NightDrone_ACLGAN_0/checkpoints/gen_00200000.pt
+```
+The translation results are saved in the `./results/NightDrone_ACLGAN_0` folder.
+
+
+
+
