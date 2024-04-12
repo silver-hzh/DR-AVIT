@@ -6,7 +6,7 @@ The datasets can be downloaded from <https://pan.baidu.com/s/1q7hxGzAaR97L8T36NK
 
 
 # Other Methods
-We also support MUNIT, DRIT, DSMAP, and DCLGAN:
+We also support MUNIT, DRIT, DSMAP, and ACLGAN:
 ## MUNIT：
 The code of the MUNIT is followed by https://github.com/NVlabs/MUNIT. Download the MUNIT code. Make the `Datasets` folder and put the downloaded datasets in the `Datasets` folder. Making the `outputs` and `results` folders to save checkpoints and translation results.
 ### Training:
