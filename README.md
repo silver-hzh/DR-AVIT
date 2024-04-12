@@ -3,7 +3,10 @@ This repository contains the availability of two new benchmark datasets: Day-Dro
 # Availability of Datasets
 The datasets can be downloaded from <https://pan.baidu.com/s/1q7hxGzAaR97L8T36NKFqpw>, the code is xbhm.
 # Code of DR-AVIT
-
+## Requirements
+- Python 3.7 or higher 
+- Pytorch 1.8.0 or higher, torchvison 0.9.0 or higher
+- Tensorboard, TensorboardX, Pyyaml, Pillow, dominate, visdom
 
 # Other Methods
 We also support MUNIT, DRIT, DSMAP, and ACLGAN:
