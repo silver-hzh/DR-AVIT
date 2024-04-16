@@ -54,4 +54,20 @@ The translation results are saved in the `./results/NightDrone_ACLGAN_0` folder.
 
 
 
+## DRIT：
+The code of the DRIT is followed by https://github.com/HsinYingLee/DRIT. Download the DRIT code. Make the `Datasets` folder and put the downloaded datasets in the `Datasets` folder. Making the `outputs`, `results`, and  `logs` folders to save checkpoints and translation results.
+### Training:
+```
+cd src/
+python train.py --dataroot ../Datasets/NightDrone --name NightDrone_DRIT_0 --gpu 0 --no_ms 
+```
+The training results are stored in the `./results/NightDrone_DRIT_0` folder.
+### Testing:
+```
+python test_batch.py --dataroot ../Datasets/NightDrone --resume ../results/NightDrone_DRIT_0/00099.pth  --name NightDrone_DRIT_0 
+```
+The translation results are saved in the `./outputs/NightDrone_DRIT_0` folder.
+
+
+
 
