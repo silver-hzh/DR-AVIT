@@ -60,7 +60,7 @@ class TestOptions():
     self.parser.add_argument('--a2b', type=int, default=1, help='translation direction, 1 for a2b, 0 for b2a')
 
     # ouptput related
-    self.parser.add_argument('--num', type=int, default=5, help='number of outputs per image')
+    self.parser.add_argument('--num', type=int, default=10, help='number of outputs per image')
     self.parser.add_argument('--name', type=str, default='trial', help='folder name to save outputs')
     self.parser.add_argument('--result_dir', type=str, default='../outputs', help='path for saving result images and models')
 
