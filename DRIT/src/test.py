@@ -1,5 +1,3 @@
-import time
-
 import torch
 from options import TestOptions
 from dataset import dataset_single
@@ -23,9 +21,8 @@ def main():
     # model
     print('\n--- load model ---')
     model = DRIT(opts)
-
-    model.resume(opts.resume, train=False)
     model.setgpu(opts.gpu)
+    model.resume(opts.resume, train=False)
     model.eval()
 
     # directory
@@ -60,4 +57,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
