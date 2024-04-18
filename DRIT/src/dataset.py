@@ -11,13 +11,11 @@ class dataset_single(data.Dataset):
         self.setname = setname
         self.phase = opts.phase
         self.images = os.listdir(os.path.join(self.dataroot, opts.phase + setname))
-        # self.img = [os.path.join(self.dataroot, opts.phase + setname, x) for x in self.images]
         self.size = len(self.images)
         self.input_dim = input_dim
 
         # setup image transformation
         transforms = [Resize((opts.resize_size), Image.BICUBIC)]
-        # transforms.append(CenterCrop(opts.crop_size))
         transforms.append(ToTensor())
         transforms.append(Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]))
         self.transforms = Compose(transforms)
