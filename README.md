@@ -20,7 +20,7 @@ The training results are stored in the `./results/NightDrone_DR_AVIT_0` folder.
 ```
 python test.py --dataroot ../Datasets/NightDrone --name NightDrone_DR_AVIT_0  --resume ../results/NightDrone_DR_AVIT_0/00099.pth --gpu 0
 ```
-The translation results are saved in the `./NightDrone_DR_AVIT_0` folder.
+The translation results are saved in the `./outputs/NightDrone_DR_AVIT_0` folder.
 
 # Other Methods
 We also support MUNIT, DRIT, DSMAP, and ACLGAN:
