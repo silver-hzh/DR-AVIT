@@ -7,6 +7,20 @@ The datasets can be downloaded from <https://pan.baidu.com/s/1q7hxGzAaR97L8T36NK
 - Python 3.7 or higher 
 - Pytorch 1.8.0 or higher, torchvison 0.9.0 or higher
 - Tensorboard, TensorboardX, Pyyaml, Pillow, dominate, visdom
+##Usage
+Download the DR_AVIT code. Make the `Datasets` folder and put the downloaded datasets in the `Datasets` folder. Making the `outputs`, `results`, and  `logs` folders to save checkpoints and translation results. 
+### Training:
+```
+cd src/
+python train.py --dataroot ../Datasets/NightDrone --name NightDrone_DR_AVIT_0  --n_ep 100 --n_ep_decay 50 --gpu 0  
+```
+The training results are stored in the `./results/NightDrone_DR_AVIT_0` folder.
+
+### Testing:
+```
+python test.py --dataroot ../Datasets/NightDrone --name NightDrone_DR_AVIT_0  --resume ../results/NightDrone_DR_AVIT_0/00099.pth --gpu 0
+```
+The translation results are saved in the `./NightDrone_DR_AVIT_0` folder.
 
 # Other Methods
 We also support MUNIT, DRIT, DSMAP, and ACLGAN:
