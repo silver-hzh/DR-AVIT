@@ -103,7 +103,7 @@ python train.py --dataroot ../Datasets/NightDrone --name NightDrone_DRIT_0 --gpu
 The training results are stored in the `./results/NightDrone_DRIT_0` folder.
 ### Testing:
 ```
-python test.py --dataroot ../Datasets/NightDrone --resume ../results/NightDrone_DRIT_0/00099.pth  --name NightDrone_DRIT_0 
+python test.py --dataroot ../Datasets/NightDrone --resume ../results/NightDrone_DRIT_0/00099.pth  --name NightDrone_DRIT_0 --no_ms
 ```
 The translation results are saved in the `./outputs/NightDrone_DRIT_0` folder.
 
