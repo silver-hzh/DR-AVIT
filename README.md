@@ -22,11 +22,11 @@ python test.py --dataroot ../Datasets/NightDrone --name NightDrone_DR_AVIT_0  --
 ```
 The translation results are saved in the `./outputs/NightDrone_DR_AVIT_0` folder.
 
-##Evaluation
+## Evaluation
 ```
-python 
+python split_sample --input ./outputs/NightDrone_DR_AVIT_0 
 ```
-
+The real images are saved in './outputs/NightDrone_DR_AVIT_0_real' and the translated images are saved in './outputs/NightDrone_DR_AVIT_0_fake'.
 # Other Methods
 We also support MUNIT, DRIT, DSMAP, and ACLGAN:
 ## MUNIT：
