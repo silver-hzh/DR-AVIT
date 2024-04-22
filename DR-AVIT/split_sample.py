@@ -20,7 +20,7 @@ def copy_file(src_path, target_path):
     :param target_path: target path
     :return: None
     """
-    shutil.copy(src=src_path, dst=target_path)
+    shutil.move(src=src_path, dst=target_path)
 
 
 def remove_file(path):
@@ -47,10 +47,6 @@ for name in filename_list:
     if 'output_' not in name:
         copy_file(src_path=os.path.join(input_img_path, name), target_path=os.path.join(real_path, name))
     else:
-        name_ = name.split('_')[1]
-        random_ = ['_0.png', '_1.png', '_2.png', '_3.png', '_4.png', '_5.png', '_6.png', '_7.png', '_8.png',
-                   '_9.png']
-        number = random.sample(random_, 1)
-        new_name = name_ + '.png'
-        copy_file(src_path=os.path.join(input_img_path, 'output_' + name_ + number[0]),
-                  target_path=os.path.join(fake_path, new_name))
+        copy_file(src_path=os.path.join(input_img_path, name),
+                  target_path=os.path.join(fake_path, name))
+
