@@ -27,7 +27,7 @@ The translation results are saved in the `./outputs/NightDrone_DR_AVIT_0` folder
 ```
 python split_sample --input ./outputs/NightDrone_DR_AVIT_0 
 ```
-The real images are saved in './outputs/NightDrone_DR_AVIT_0_real' and the translated images are saved in './outputs/NightDrone_DR_AVIT_0_fake'.
+The real images are saved in `./outputs/NightDrone_DR_AVIT_0_real` and the translated images are saved in `./outputs/NightDrone_DR_AVIT_0_fake`.
 ### Realism  Evaluation  
 We use torch-fidelity (https://github.com/toshas/torch-fidelity) to evaluate the realism of the translated results.
 #### FID
