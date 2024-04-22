@@ -38,6 +38,15 @@ fidelity --gpu 0 --fid --input1  ./outputs/NightDrone_DR_AVIT_0_fake --input2 ./
 ```
 fidelity --gpu 0 --kid --input1  ./outputs/NightDrone_DR_AVIT_0_fake --input2 ./outputs/NightDrone_DR_AVIT_0_real
 ```
+
+### Diversity Evaluation
+We use the mean LPIPS distance (https://github.com/silver-hzh/PerceptualSimilarity) and mean SSIM to evaluate the diversity of the translation results.
+#### LPIPS
+```
+cd MLPIPS
+```
+
+### SSIM
 # Other Methods
 We also support MUNIT, DRIT, DSMAP, and ACLGAN:
 ## MUNIT：
