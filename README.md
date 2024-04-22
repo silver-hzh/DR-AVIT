@@ -22,6 +22,11 @@ python test.py --dataroot ../Datasets/NightDrone --name NightDrone_DR_AVIT_0  --
 ```
 The translation results are saved in the `./outputs/NightDrone_DR_AVIT_0` folder.
 
+##Evaluation
+```
+python 
+```
+
 # Other Methods
 We also support MUNIT, DRIT, DSMAP, and ACLGAN:
 ## MUNIT：
