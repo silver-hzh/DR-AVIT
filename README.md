@@ -23,10 +23,21 @@ python test.py --dataroot ../Datasets/NightDrone --name NightDrone_DR_AVIT_0  --
 The translation results are saved in the `./outputs/NightDrone_DR_AVIT_0` folder.
 
 ## Evaluation
+### Sample division
 ```
 python split_sample --input ./outputs/NightDrone_DR_AVIT_0 
 ```
 The real images are saved in './outputs/NightDrone_DR_AVIT_0_real' and the translated images are saved in './outputs/NightDrone_DR_AVIT_0_fake'.
+### Realism  Evaluation  
+We use torch-fidelity (https://github.com/toshas/torch-fidelity) to evaluate the realism of the translated results.
+#### FID
+```
+fidelity --gpu 0 --fid --input1  ./outputs/NightDrone_DR_AVIT_0_fake --input2 ./outputs/NightDrone_DR_AVIT_0_real
+```
+#### KID
+```
+fidelity --gpu 0 --kid --input1  ./outputs/NightDrone_DR_AVIT_0_fake --input2 ./outputs/NightDrone_DR_AVIT_0_real
+```
 # Other Methods
 We also support MUNIT, DRIT, DSMAP, and ACLGAN:
 ## MUNIT：
