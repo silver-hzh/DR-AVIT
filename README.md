@@ -7,7 +7,7 @@ The datasets can be downloaded from <https://pan.baidu.com/s/1q7hxGzAaR97L8T36NK
 - Python 3.7 or higher 
 - Pytorch 1.8.0, torchvison 0.9.0 
 - Tensorboard, TensorboardX, Pyyaml, Pillow, dominate, visdom
-##Usage
+## Usage
 Download the DR_AVIT code. Make the `Datasets` folder and put the downloaded datasets in the `Datasets` folder. Making the `outputs`, `results`, and  `logs` folders to save checkpoints and translation results. 
 ### Training:
 ```
