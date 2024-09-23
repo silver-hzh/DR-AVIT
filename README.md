@@ -112,6 +112,27 @@ python test.py --dataroot ../Datasets/NightDrone --resume ../results/NightDrone_
 ```
 The translation results are saved in the `./outputs/NightDrone_DRIT_0` folder.
 
-
-
+Citation
+If you find this code useful for your research, please cite our paper.
+```
+@article{0DR,
+  title={DR-AVIT: Toward Diverse and Realistic Aerial Visible-to-Infrared Image Translation},
+  author={ Han, Zonghao  and  Zhang, Shun  and  Su, Yuru  and  Chen, Xiaoning  and  Mei, Shaohui },
+  journal={IEEE Transactions on Geoscience and Remote Sensing},
+  volume={62},
+}
+```
+Our dataset was created based on DroneVehicle, please also cite this paper.
+```
+@article{sun2022drone,
+  title={Drone-based RGB-infrared cross-modality vehicle detection via uncertainty-aware learning},
+  author={Sun, Yiming and Cao, Bing and Zhu, Pengfei and Hu, Qinghua},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  volume={32},
+  number={10},
+  pages={6700--6713},
+  year={2022},
+  publisher={IEEE}
+}
+```
 
