@@ -1,7 +1,9 @@
+import time
+
 import torch
 from options import TestOptions
 from dataset import dataset_single
-from model import DRIT
+from model import DR_AVIT
 from saver import save_imgs
 import os
 
@@ -20,9 +22,10 @@ def main():
 
     # model
     print('\n--- load model ---')
-    model = DRIT(opts)
-    model.setgpu(opts.gpu)
+    model = DR_AVIT(opts)
+
     model.resume(opts.resume, train=False)
+    model.setgpu(opts.gpu)
     model.eval()
 
     # directory
@@ -57,3 +60,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
